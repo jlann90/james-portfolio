@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;1,700&family=Climate+Crisis&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-th-db: #011627;
+  --color-th-rd: #f71735;
+  --color-th-wh: #fdfffc;
+  --color-th-yw: #ff9f1c;
+  --color-th-yw: #008dd5;
+}
+
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-bold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.climate-crisis {
+  font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YEAR" 1979;
+}
