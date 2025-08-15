@@ -4,15 +4,23 @@ export default function Homepage(): React.ReactElement {
   return (
     <section className="pt-[120px] max-w-[700px]">
       <img
+        className="animate-roll-in"
+        style={{ "--delay": "0.2s" } as React.CSSProperties}
         src={ProfilePhoto}
         alt="Pencil sketch style photo of James Lannon"
         width="250"
       />
-      <h1 className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title">
+      <h1
+        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
+        style={{ "--delay": "0.4s" } as React.CSSProperties}
+      >
         James
         <br /> Lannon
       </h1>
-      <p className="barolow-bold text-th-wh text-2xl">
+      <p
+        className="barlow-bold text-th-wh text-2xl animate-fade-in-staggered"
+        style={{ "--delay": "0.6s" } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
         ultrices varius. Donec enim libero, cursus vel dui vitae, tempor lacinia
         nunc. Nam elementum ipsum suscipit massa posuere tempus. Phasellus

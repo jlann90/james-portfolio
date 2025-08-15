@@ -5,7 +5,7 @@ import MenuItems from "./MenuItems";
 export default function Menu(): React.ReactElement {
   return (
     <section className="pt-[36px] pl-[102px] h-screen">
-      <nav className="w-[282px] h-[101vh] bg-th-yw drop-shadow-menu rounded-xl outline-6 outline-th-db flex flex-col justify-between animate-slide-up">
+      <nav className="w-[282px] h-[100vh] bg-th-yw rounded-t-xl outline-6 outline-th-db flex flex-col justify-between animate-slide-up shadow-[var(--box-shadow-menu)]">
         <ul>
           <li
             className="animate-fade-in-staggered"
