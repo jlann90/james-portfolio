@@ -1,4 +1,4 @@
-import { useMenu } from "../context/MenuContext.tsx";
+import { useMenu } from "../context/MenuContext";
 
 interface MenuItemsProps {
   menuId: string;

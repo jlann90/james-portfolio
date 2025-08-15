@@ -1,6 +1,6 @@
-import { MenuProvider, useMenu } from "./context/MenuContext.tsx";
-import Menu from "./components/Menu.tsx";
-import HomePage from "./components/HomePage.tsx";
+import { MenuProvider, useMenu } from "./context/MenuContext";
+import Menu from "./components/Menu";
+import HomePage from "./components/HomePage";
 
 function AppContent(): React.ReactElement {
   const { menuSelection } = useMenu();

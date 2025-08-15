@@ -1,6 +1,6 @@
 import GitHubIcon from "./../assets/GitHubIcon.svg";
 import LinkedInIcon from "./../assets/LinkedInIcon.svg";
-import MenuItems from "./MenuItems.tsx";
+import MenuItems from "./MenuItems";
 
 export default function Menu(): React.ReactElement {
   return (
