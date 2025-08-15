@@ -13,6 +13,7 @@
   --drop-shadow-menu: -20px -16px 0 rgb(247, 23, 53);
   --drop-shadow-title: -10px -6px 0 rgb(247, 23, 53);
   --drop-shadow-menu-item: -4px -2px 0 rgb(247, 23, 53);
+  --drop-shadow-app: 0px 0px 20px rgb(23, 23, 22);
 }
 
 .barlow-bold {
@@ -33,4 +34,13 @@
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "YEAR" 1979;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

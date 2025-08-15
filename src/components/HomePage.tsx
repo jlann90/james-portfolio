@@ -6,7 +6,7 @@ export default function Homepage(): React.ReactElement {
       <img
         src={ProfilePhoto}
         alt="Pencil sketch style photo of James Lannon"
-        width="248"
+        width="250"
       />
       <h1 className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title">
         James
