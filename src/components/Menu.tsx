@@ -9,25 +9,25 @@ export default function Menu(): React.ReactElement {
         <ul>
           <li
             className="animate-fade-in-staggered"
-            style={{ "--delay": "0s" } as React.CSSProperties}
+            style={{ "--delay": ".2s" } as React.CSSProperties}
           >
             <MenuItems menuId="home">Home</MenuItems>
           </li>
           <li
             className="animate-fade-in-staggered"
-            style={{ "--delay": "0.2s" } as React.CSSProperties}
+            style={{ "--delay": "0.4s" } as React.CSSProperties}
           >
             <MenuItems menuId="projects">Projects</MenuItems>
           </li>
           <li
             className="animate-fade-in-staggered"
-            style={{ "--delay": "0.4s" } as React.CSSProperties}
+            style={{ "--delay": "0.6s" } as React.CSSProperties}
           >
             <MenuItems menuId="experience">Experience</MenuItems>
           </li>
           <li
             className="animate-fade-in-staggered"
-            style={{ "--delay": "0.6s" } as React.CSSProperties}
+            style={{ "--delay": "0.8s" } as React.CSSProperties}
           >
             <MenuItems menuId="contact">Contact</MenuItems>
           </li>
@@ -39,7 +39,7 @@ export default function Menu(): React.ReactElement {
             aria-label="link to James Lannon Github"
             href="https://github.com/jlann90"
             className="pr-[18px] hover:drop-shadow-menu-item animate-fade-in-staggered"
-            style={{ "--delay": "0.8s" } as React.CSSProperties}
+            style={{ "--delay": "1s" } as React.CSSProperties}
           >
             <img src={GitHubIcon} alt="GitHub Logo" width="24" />
           </a>
@@ -49,7 +49,7 @@ export default function Menu(): React.ReactElement {
             aria-label="link to James Lannon LinkedIn"
             href="https://www.linkedin.com/in/james-lannon/"
             className="hover:drop-shadow-menu-item animate-fade-in-staggered"
-            style={{ "--delay": "1s" } as React.CSSProperties}
+            style={{ "--delay": "1.2s" } as React.CSSProperties}
           >
             <img src={LinkedInIcon} alt="LinkedIn Logo" width="24" />
           </a>

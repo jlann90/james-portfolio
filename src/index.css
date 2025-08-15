@@ -5,7 +5,9 @@
 
 @theme {
   --color-th-db: oklch(19.28% 0.045 243.97);
+  --color-th-db-dark: oklch(4% 0.045 243.97);
   --color-th-rd: oklch(62.11% 0.243 23.72);
+  --color-th-rd-dark: oklch(45% 0.243 23.72);
   --color-th-wh: oklch(99.77% 0.004 134.85);
   --color-th-yw: oklch(78.28% 0.168 66.2);
   --color-th-lb: oklch(61.67% 0.147 242.18);
@@ -50,6 +52,10 @@
     transform: translateY(calc(100% + 1vh));
     opacity: 0;
   }
+  70% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -57,15 +63,17 @@
 }
 
 .animate-slide-up {
-  animation: slide-up 0.8s ease-out 0.3s both;
+  animation: slide-up 1s ease-out 0.3s both;
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
+    clip-path: inset(0 100% 0 0);
   }
   100% {
     opacity: 1;
+    clip-path: inset(0 0% 0 0);
   }
 }
 

@@ -5,7 +5,7 @@ export default function Homepage(): React.ReactElement {
     <section className="pt-[120px] max-w-[700px]">
       <img
         className="animate-roll-in"
-        style={{ "--delay": "0.2s" } as React.CSSProperties}
+        style={{ "--delay": ".4s" } as React.CSSProperties}
         src={ProfilePhoto}
         alt="Pencil sketch style photo of James Lannon"
         width="250"
