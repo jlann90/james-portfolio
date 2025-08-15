@@ -1,6 +1,14 @@
-import { useMenu } from "../context/MenuContext.jsx";
+import { useMenu } from "../context/MenuContext.tsx";
 
-export default function MenuItems({ menuId, children }) {
+interface MenuItemsProps {
+  menuId: string;
+  children: React.ReactNode;
+}
+
+export default function MenuItems({
+  menuId,
+  children,
+}: MenuItemsProps): React.ReactElement {
   const { menuSelection, handleMenuSelect } = useMenu();
   const menuListClass = "text-right pt-[24px] pr-[24px]";
   const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db underline";

@@ -1,11 +1,11 @@
-import { MenuProvider, useMenu } from "./context/MenuContext.jsx";
-import Menu from "./components/Menu.jsx";
-import HomePage from "./components/HomePage.jsx";
+import { MenuProvider, useMenu } from "./context/MenuContext.tsx";
+import Menu from "./components/Menu.tsx";
+import HomePage from "./components/HomePage.tsx";
 
-function AppContent() {
+function AppContent(): React.ReactElement {
   const { menuSelection } = useMenu();
 
-  let pageContent;
+  let pageContent: React.ReactElement | null = null;
   if (menuSelection.menuId === "home") {
     pageContent = <HomePage />;
   }
@@ -18,7 +18,7 @@ function AppContent() {
   );
 }
 
-function App() {
+function App(): React.ReactElement {
   return (
     <MenuProvider>
       <AppContent />
