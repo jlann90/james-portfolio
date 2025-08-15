@@ -14,9 +14,11 @@ function AppContent(): React.ReactElement {
   }
 
   return (
-    <main className="flex justify-between bg-th-db pl-[84px] pr-[24px] h-screen overflow-hidden">
+    <main className="flex justify-between bg-th-db pl-[84px] pr-[24px] h-screen">
       <div className="flex-1 overflow-y-auto scrollbar-hide">{pageContent}</div>
-      <Menu />
+      <div className="overflow-visible">
+        <Menu />
+      </div>
     </main>
   );
 }
@@ -24,7 +26,7 @@ function AppContent(): React.ReactElement {
 function App(): React.ReactElement {
   return (
     <div className="min-h-screen bg-th-rd flex justify-center">
-      <div className="w-full max-w-[1840px] drop-shadow-app">
+      <div className="w-full max-w-[1740px] drop-shadow-app">
         <MenuProvider>
           <AppContent />
         </MenuProvider>
