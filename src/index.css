@@ -12,6 +12,7 @@
 
   --drop-shadow-menu: -20px -16px 0 rgb(247, 23, 53);
   --drop-shadow-title: -10px -6px 0 rgb(247, 23, 53);
+  --drop-shadow-menu-item: -4px -2px 0 rgb(247, 23, 53);
 }
 
 .barlow-bold {
