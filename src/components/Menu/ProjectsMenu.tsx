@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useMenu } from "../../context/MenuContext";
 
 interface ProjectsMenuProps {
@@ -10,13 +11,30 @@ export default function ProjectsMenu({
   children,
 }: ProjectsMenuProps): React.ReactElement {
   const { menuSelection, handleMenuSelect } = useMenu();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+
   const menuListClass = "text-right pt-[24px] pr-[24px]";
   const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db underline";
 
-  const isActive =
-    menuSelection.menuId === menuId ||
-    menuSelection.menuId.startsWith("project-");
+  const isActive = menuSelection.menuId === menuId;
+  const shouldShowSubmenu =
+    isActive || menuSelection.menuId.startsWith("project-");
   const hoverClass = isActive ? "" : "hover:drop-shadow-menu-item";
+
+  useEffect(() => {
+    if (shouldShowSubmenu && !isExpanded) {
+      setIsExpanded(true);
+      setIsAnimatingOut(false);
+    } else if (!shouldShowSubmenu && isExpanded) {
+      setIsAnimatingOut(true);
+      const timer = setTimeout(() => {
+        setIsExpanded(false);
+        setIsAnimatingOut(false);
+      }, 400); // Match animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [shouldShowSubmenu]);
 
   const projects = [
     {
@@ -44,8 +62,12 @@ export default function ProjectsMenu({
           {children}
         </button>
       </li>
-      {isActive && (
-        <div className="animate-slide-down">
+      {isExpanded && (
+        <div
+          className={
+            isAnimatingOut ? "animate-slide-up-menu" : "animate-slide-down"
+          }
+        >
           {projects.map((project, index) => {
             const isProjectActive =
               menuSelection.menuId === `project-${project.id}`;
@@ -70,10 +92,7 @@ export default function ProjectsMenu({
                 >
                   {isProjectActive ? (
                     <>
-                      <span className="project-arrow animate-fade-in-staggered">
-                        ➜
-                      </span>{" "}
-                      {project.title}
+                      <span className="project-arrow">➜</span> {project.title}
                     </>
                   ) : (
                     project.title

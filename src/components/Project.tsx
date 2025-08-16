@@ -53,7 +53,7 @@ export default function Project({
         width="500"
       />
       <h1
-        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-[40px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
         style={{ "--delay": "0.6s" } as React.CSSProperties}
       >
         {foundProject.title}

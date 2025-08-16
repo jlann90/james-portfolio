@@ -30,7 +30,7 @@ function AppContent(): React.ReactElement {
 
 function App(): React.ReactElement {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-th-rd-dark to-th-rd flex justify-center">
+    <div className="min-h-screen bg-[#202124] flex justify-center">
       <div className="w-full max-w-[1740px] drop-shadow-app">
         <MenuProvider>
           <AppContent />

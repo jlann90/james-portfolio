@@ -15,7 +15,7 @@
   --drop-shadow-title: -10px -6px 0 rgb(247, 23, 53);
   --drop-shadow-menu-item: -2px -2px 0 rgb(247, 23, 53);
   --drop-shadow-button: -8px -4px 0 rgb(247, 23, 53);
-  --drop-shadow-app: 0px 0px 20px rgb(23, 23, 22);
+  --drop-shadow-app: 0px 0px 60px rgb(0, 0, 0);
 }
 
 .barlow-bold {
@@ -74,18 +74,23 @@
   overflow: hidden;
 }
 
-/* Project menu item fade-in animation */
-@keyframes project-fade-in {
+/* ProjectsMenu slide-up animation */
+@keyframes slide-up-menu {
   0% {
-    opacity: 0;
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
   }
   100% {
-    opacity: 1;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }
 
-.animate-project-fade-in {
-  animation: project-fade-in 0.6s ease-out both;
+.animate-slide-up-menu {
+  animation: slide-up-menu 0.4s ease-in both;
+  overflow: hidden;
 }
 
 @keyframes slide-up {
@@ -105,6 +110,20 @@
 
 .animate-slide-up {
   animation: slide-up 1s ease-out 0.3s both;
+}
+
+/* Project menu item fade-in animation */
+@keyframes project-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-project-fade-in {
+  animation: project-fade-in 0.6s ease-out both;
 }
 
 @keyframes fade-in {
