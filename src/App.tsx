@@ -1,7 +1,8 @@
 import { MenuProvider, useMenu } from "./context/MenuContext";
-import Menu from "./components/Menu";
+import Menu from "./components/Menu/Menu";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
+import Project from "./components/Project";
 
 function AppContent(): React.ReactElement {
   const { menuSelection } = useMenu();
@@ -11,6 +12,9 @@ function AppContent(): React.ReactElement {
     pageContent = <HomePage />;
   } else if (menuSelection.menuId === "projects") {
     pageContent = <ProjectsPage />;
+  } else if (menuSelection.menuId.startsWith("project-")) {
+    const projectId = menuSelection.menuId.replace("project-", "");
+    pageContent = <Project key={projectId} projectId={projectId} />;
   }
 
   return (

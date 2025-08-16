@@ -10,11 +10,10 @@
   --color-th-rd-dark: oklch(45% 0.243 23.72);
   --color-th-wh: oklch(99.77% 0.004 134.85);
   --color-th-yw: oklch(78.28% 0.168 66.2);
-  --color-th-lb: oklch(61.67% 0.147 242.18);
 
   --box-shadow-menu: -20px -16px 0 rgb(247, 23, 53);
   --drop-shadow-title: -10px -6px 0 rgb(247, 23, 53);
-  --drop-shadow-menu-item: -4px -2px 0 rgb(247, 23, 53);
+  --drop-shadow-menu-item: -2px -2px 0 rgb(247, 23, 53);
   --drop-shadow-app: 0px 0px 20px rgb(23, 23, 22);
 }
 
@@ -47,6 +46,47 @@
   display: none; /* Safari and Chrome */
 }
 
+/* Project menu arrow with fallback */
+.project-arrow {
+  font-family:
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji",
+    "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol",
+    Arial, sans-serif;
+}
+
+/* ProjectsMenu slide-down animation */
+@keyframes slide-down {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.6s ease-out both;
+  overflow: hidden;
+}
+
+/* Project menu item fade-in animation */
+@keyframes project-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-project-fade-in {
+  animation: project-fade-in 0.6s ease-out both;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(calc(100% + 1vh));
@@ -69,16 +109,16 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
-    clip-path: inset(0 100% 0 0);
+    transform: translate(-20px, -20px);
   }
   100% {
     opacity: 1;
-    clip-path: inset(0 0% 0 0);
+    transform: translate(0, 0);
   }
 }
 
 .animate-fade-in-staggered {
-  animation: fade-in 0.6s ease-out calc(1.1s + var(--delay, 0s)) both;
+  animation: fade-in 0.8s ease-out calc(0.2s + var(--delay, 0s)) both;
 }
 
 @keyframes roll-in {

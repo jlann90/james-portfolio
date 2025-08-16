@@ -1,6 +1,7 @@
-import GitHubIcon from "./../assets/GitHubIcon.svg";
-import LinkedInIcon from "./../assets/LinkedInIcon.svg";
+import GitHubIcon from "./../../assets/GitHubIcon.svg";
+import LinkedInIcon from "./../../assets/LinkedInIcon.svg";
 import MenuItems from "./MenuItems";
+import ProjectsMenu from "./ProjectsMenu";
 
 export default function Menu(): React.ReactElement {
   return (
@@ -17,7 +18,7 @@ export default function Menu(): React.ReactElement {
             className="animate-fade-in-staggered"
             style={{ "--delay": "0.4s" } as React.CSSProperties}
           >
-            <MenuItems menuId="projects">Projects</MenuItems>
+            <ProjectsMenu menuId="projects">Projects</ProjectsMenu>
           </li>
           <li
             className="animate-fade-in-staggered"
