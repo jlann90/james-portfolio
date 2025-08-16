@@ -36,14 +36,26 @@ export default function ProjectsPage(): React.ReactElement {
   ];
 
   return (
-    <section className="pt-[120px] max-w-[882px] flex flex-wrap gap-[66px]">
-      {projects.map((project) => (
-        <div key={project.title} className="w-[250px]">
-          <img src={project.image} alt={project.title} width="250" />
-          <h2 className="w-[250px] climate-crisis text-[24px] uppercase pt-[18px] text-th-yw">
+    <section className="pt-[120px] max-w-[890px] flex flex-wrap gap-[66px] pl-[8px]">
+      {projects.map((project, index) => (
+        <button
+          key={project.title}
+          className="w-[250px] hover:drop-shadow-menu-item"
+        >
+          <img
+            className="animate-fade-in-staggered"
+            style={{ "--delay": `${index * 0.2}s` } as React.CSSProperties}
+            src={project.image}
+            alt={project.title}
+            width="250"
+          />
+          <h2
+            className="w-[250px] climate-crisis text-[24px] uppercase pt-[18px] text-th-yw animate-fade-in-staggered"
+            style={{ "--delay": `${index * 0.3}s` } as React.CSSProperties}
+          >
             {project.title}
           </h2>
-        </div>
+        </button>
       ))}
     </section>
   );

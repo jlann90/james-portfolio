@@ -38,20 +38,24 @@ export default function Menu(): React.ReactElement {
             rel="noopener noreferrer"
             aria-label="link to James Lannon Github"
             href="https://github.com/jlann90"
-            className="pr-[18px] hover:drop-shadow-menu-item animate-fade-in-staggered"
+            className="pr-[18px] animate-fade-in-staggered"
             style={{ "--delay": "1s" } as React.CSSProperties}
           >
-            <img src={GitHubIcon} alt="GitHub Logo" width="24" />
+            <div className="hover:drop-shadow-menu-item p-[4px]">
+              <img src={GitHubIcon} alt="GitHub Logo" width="24" />
+            </div>
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             aria-label="link to James Lannon LinkedIn"
             href="https://www.linkedin.com/in/james-lannon/"
-            className="hover:drop-shadow-menu-item animate-fade-in-staggered"
+            className="animate-fade-in-staggered"
             style={{ "--delay": "1.2s" } as React.CSSProperties}
           >
-            <img src={LinkedInIcon} alt="LinkedIn Logo" width="24" />
+            <div className="hover:drop-shadow-menu-item p-[4px]">
+              <img src={LinkedInIcon} alt="LinkedIn Logo" width="24" />
+            </div>
           </a>
         </div>
       </nav>
