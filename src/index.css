@@ -158,5 +158,5 @@
 
 .animate-roll-in {
   animation: roll-in 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    calc(1.1s + var(--delay, 0s)) both;
+    calc(0.4s + var(--delay, 0s)) both;
 }
