@@ -6,12 +6,6 @@ interface ProjectProps {
   projectId: string;
 }
 
-interface ProjectData {
-  title: string;
-  description: string;
-  image: string;
-}
-
 export default function Project({
   projectId,
 }: ProjectProps): React.ReactElement {

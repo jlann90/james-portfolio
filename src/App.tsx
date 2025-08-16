@@ -3,6 +3,7 @@ import Menu from "./components/Menu/Menu";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function AppContent(): React.ReactElement {
   const { menuSelection } = useMenu();
@@ -15,6 +16,8 @@ function AppContent(): React.ReactElement {
   } else if (menuSelection.menuId.startsWith("project-")) {
     const projectId = menuSelection.menuId.replace("project-", "");
     pageContent = <Project key={projectId} projectId={projectId} />;
+  } else if (menuSelection.menuId === "contact") {
+    pageContent = <Contact />;
   }
 
   return (
