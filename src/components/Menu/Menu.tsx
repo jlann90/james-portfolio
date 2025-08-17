@@ -42,7 +42,7 @@ export default function Menu(): React.ReactElement {
             className="pr-[18px] animate-fade-in-staggered"
             style={{ "--delay": "1s" } as React.CSSProperties}
           >
-            <div className="hover:drop-shadow-menu-item p-[4px]">
+            <div className="hover:drop-shadow-menu-item p-[4px] transition-all duration-200">
               <img src={GitHubIcon} alt="GitHub Logo" width="24" />
             </div>
           </a>
@@ -54,7 +54,7 @@ export default function Menu(): React.ReactElement {
             className="animate-fade-in-staggered"
             style={{ "--delay": "1.2s" } as React.CSSProperties}
           >
-            <div className="hover:drop-shadow-menu-item p-[4px]">
+            <div className="hover:drop-shadow-menu-item p-[4px] transition-all duration-200">
               <img src={LinkedInIcon} alt="LinkedIn Logo" width="24" />
             </div>
           </a>

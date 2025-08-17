@@ -54,7 +54,7 @@ export default function ProjectsPage(): React.ReactElement {
       {projects.map((project, index) => (
         <button
           key={`${project.id}-${index}`}
-          className="w-[250px] hover:drop-shadow-button"
+          className="w-[250px] hover:drop-shadow-button transition-all duration-200"
           onClick={() => handleProjectClick(project.id)}
         >
           <img

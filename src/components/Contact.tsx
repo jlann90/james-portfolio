@@ -1,6 +1,17 @@
 import Button from "./Button";
 
 export default function Contact(): React.ReactElement {
+  const handleContactClick = () => {
+    // This will be handled by the modal portal
+    const modalRoot = document.getElementById("modal-root");
+    if (modalRoot) {
+      // Trigger modal opening logic here
+      // We'll need to create a custom event or use a different approach
+      const event = new CustomEvent("openContactModal");
+      document.dispatchEvent(event);
+    }
+  };
+
   return (
     <section className="pt-[120px] max-w-[700px]">
       <h1
@@ -25,7 +36,7 @@ export default function Contact(): React.ReactElement {
         className="pt-[20px] flex justify-end animate-fade-in-staggered"
         style={{ "--delay": "0.3s" } as React.CSSProperties}
       >
-        <Button>Contact Me</Button>
+        <Button onClick={handleContactClick}>Contact Me</Button>
       </div>
     </section>
   );

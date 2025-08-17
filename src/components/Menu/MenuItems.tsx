@@ -14,7 +14,9 @@ export default function MenuItems({
   const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db underline";
 
   const isActive = menuSelection.menuId === menuId;
-  const hoverClass = isActive ? "" : "hover:drop-shadow-menu-item";
+  const hoverClass = isActive
+    ? ""
+    : "hover:drop-shadow-menu-item transition-all duration-200";
 
   return (
     <li className={menuListClass}>

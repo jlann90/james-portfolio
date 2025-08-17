@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import Modal from "./components/Modal";
 
 function AppContent(): React.ReactElement {
   const { menuSelection } = useMenu();
@@ -36,6 +37,7 @@ function App(): React.ReactElement {
           <AppContent />
         </MenuProvider>
       </div>
+      <Modal />
     </div>
   );
 }

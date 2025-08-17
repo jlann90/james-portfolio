@@ -20,7 +20,9 @@ export default function ProjectsMenu({
   const isActive = menuSelection.menuId === menuId;
   const shouldShowSubmenu =
     isActive || menuSelection.menuId.startsWith("project-");
-  const hoverClass = isActive ? "" : "hover:drop-shadow-menu-item";
+  const hoverClass = isActive
+    ? ""
+    : "hover:drop-shadow-menu-item transition-all duration-200";
 
   useEffect(() => {
     if (shouldShowSubmenu && !isExpanded) {
@@ -73,7 +75,7 @@ export default function ProjectsMenu({
               menuSelection.menuId === `project-${project.id}`;
             const projectHoverClass = isProjectActive
               ? ""
-              : "hover:drop-shadow-menu-item";
+              : "hover:drop-shadow-menu-item transition-all duration-200";
             return (
               <li
                 key={project.id}
