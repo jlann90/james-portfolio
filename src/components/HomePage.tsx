@@ -2,22 +2,21 @@ import ProfilePhoto from "./../assets/ProfilePhoto.png";
 
 export default function Homepage(): React.ReactElement {
   return (
-    <section className="pt-[120px] max-w-[700px]">
+    <section className="pt-[120px] max-w-[900px]">
       <img
         className="animate-roll-in"
         src={ProfilePhoto}
         alt="Pencil sketch style photo of James Lannon"
-        width="250"
+        width="400"
       />
       <h1
         className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
         style={{ "--delay": "0.2s" } as React.CSSProperties}
       >
-        James
-        <br /> Lannon
+        James Lannon
       </h1>
       <p
-        className="barlow-bold text-th-wh text-2xl animate-fade-in-staggered"
+        className="barlow-bold text-th-wh text-2xl pt-[30px]animate-fade-in-staggered"
         style={{ "--delay": "0.3s" } as React.CSSProperties}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
