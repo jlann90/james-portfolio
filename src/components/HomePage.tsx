@@ -10,14 +10,14 @@ export default function Homepage(): React.ReactElement {
         width="400"
       />
       <h1
-        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw text-shadow-title animate-fade-in-staggered"
         style={{ "--delay": "0.2s" } as React.CSSProperties}
       >
         James Lannon
       </h1>
       <p
-        className="barlow-bold text-th-wh text-2xl pt-[30px]animate-fade-in-staggered"
-        style={{ "--delay": "0.3s" } as React.CSSProperties}
+        className="barlow-bold text-th-wh text-2xl pt-[24px]   animate-fade-in-staggered"
+        style={{ "--delay": "0.4s" } as React.CSSProperties}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
         ultrices varius. Donec enim libero, cursus vel dui vitae, tempor lacinia

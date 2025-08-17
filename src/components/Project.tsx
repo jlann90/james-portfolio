@@ -35,8 +35,8 @@ export default function Project({
 
   if (!foundProject) {
     return (
-      <section className="pt-[120px] max-w-[700px]">
-        <h1 className="climate-crisis text-[64px] uppercase text-th-yw drop-shadow-title">
+      <section className="pt-[120px] max-w-[900px]">
+        <h1 className="climate-crisis text-[64px] uppercase text-th-yw text-shadow-title">
           Project Not Found
         </h1>
       </section>
@@ -44,7 +44,7 @@ export default function Project({
   }
 
   return (
-    <section className="pt-[120px] max-w-[700px]">
+    <section className="pt-[120px] max-w-[900px]">
       <img
         className="animate-fade-in-staggered"
         style={{ "--delay": "0.4s" } as React.CSSProperties}
@@ -53,13 +53,13 @@ export default function Project({
         width="500"
       />
       <h1
-        className="climate-crisis text-[40px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-[40px] uppercase pt-[30px] text-th-yw animate-fade-in-staggered"
         style={{ "--delay": "0.6s" } as React.CSSProperties}
       >
         {foundProject.title}
       </h1>
       <p
-        className="barlow-bold text-th-wh text-2xl pt-[20px] animate-fade-in-staggered"
+        className="barlow-bold text-th-wh text-2xl pt-[24px] animate-fade-in-staggered"
         style={{ "--delay": "0.8s" } as React.CSSProperties}
       >
         {foundProject.description}

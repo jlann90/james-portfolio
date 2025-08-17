@@ -13,15 +13,15 @@ export default function Contact(): React.ReactElement {
   };
 
   return (
-    <section className="pt-[120px] max-w-[700px]">
+    <section className="pt-[120px] max-w-[900px]">
       <h1
-        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw drop-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] text-th-yw animate-fade-in-staggered text-shadow-title"
         style={{ "--delay": "0.1s" } as React.CSSProperties}
       >
         Let's work together
       </h1>
       <p
-        className="barlow-bold text-th-wh text-2xl animate-fade-in-staggered"
+        className="barlow-bold text-th-wh text-2xl pt-[24px]  animate-fade-in-staggered"
         style={{ "--delay": "0.2s" } as React.CSSProperties}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
