@@ -1,31 +1,8 @@
 import { useMenu } from "../context/MenuContext";
-import IndeedExamples from "./../assets/IndeedExamples.png";
-import RegenceExamples from "./../assets/RegenceExamples.png";
-import PortfolioWebsite from "./../assets/PortfolioWebsite.png";
+import { projects } from "../data/projects";
 
 export default function ProjectsPage(): React.ReactElement {
   const { handleMenuSelect } = useMenu();
-
-  const projects = [
-    {
-      id: "indeed-component-library",
-      title: "Indeed Component Library",
-      description: "Example emails created with the React based module library",
-      image: IndeedExamples,
-    },
-    {
-      id: "cambia-component-library",
-      title: "Cambia Component Library",
-      description: "Example emails created with Salesforce Email Studio",
-      image: RegenceExamples,
-    },
-    {
-      id: "portfolio-website",
-      title: "Portfolio Website",
-      description: "Example emails created with the React based module library",
-      image: PortfolioWebsite,
-    },
-  ];
 
   const handleProjectClick = (projectId: string) => {
     handleMenuSelect(`project-${projectId}`);

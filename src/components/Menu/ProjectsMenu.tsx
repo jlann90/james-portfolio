@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMenu } from "../../context/MenuContext";
+import { projects } from "../../data/projects";
 
 interface ProjectsMenuProps {
   menuId: string;
@@ -36,20 +37,7 @@ export default function ProjectsMenu({
     }
   }, [shouldShowSubmenu]);
 
-  const projects = [
-    {
-      id: "indeed-component-library",
-      title: "Indeed Component Library",
-    },
-    {
-      id: "cambia-component-library",
-      title: "Cambia Component Library",
-    },
-    {
-      id: "portfolio-website",
-      title: "Portfolio Website",
-    },
-  ];
+  const menuProjects = projects.map(({ id, title }) => ({ id, title }));
 
   return (
     <>
@@ -77,7 +65,7 @@ export default function ProjectsMenu({
             isAnimatingOut ? "animate-slide-up-menu" : "animate-slide-down"
           }
         >
-          {projects.map((project, index) => {
+          {menuProjects.map((project, index) => {
             const isProjectActive =
               menuSelection.menuId === `project-${project.id}`;
             const projectHoverClass = isProjectActive ? "" : "group";
