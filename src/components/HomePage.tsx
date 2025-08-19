@@ -1,4 +1,5 @@
 import ProfilePhoto from "./../assets/ProfilePhoto.png";
+import Button from "./Button";
 
 export default function Homepage(): React.ReactElement {
   return (
@@ -26,6 +27,14 @@ export default function Homepage(): React.ReactElement {
         React, Typescript, HTML, CSS, accessibility requirements and design
         tooling, bridging the gap between design and engineering.
       </p>
+      <div
+        className="pt-[20px] flex justify-end animate-fade-in-staggered"
+        style={{ "--delay": "0.5s" } as React.CSSProperties}
+      >
+        <a href="/JamesResume.pdf" target="_blank" rel="noopener noreferrer">
+          <Button>Download Resume</Button>
+        </a>
+      </div>
     </section>
   );
 }
