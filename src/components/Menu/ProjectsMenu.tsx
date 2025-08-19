@@ -15,14 +15,12 @@ export default function ProjectsMenu({
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
   const menuListClass = "text-right pt-[24px] pr-[24px]";
-  const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db underline";
+  const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db";
 
   const isActive = menuSelection.menuId === menuId;
   const shouldShowSubmenu =
     isActive || menuSelection.menuId.startsWith("project-");
-  const hoverClass = isActive
-    ? ""
-    : "hover:drop-shadow-menu-item transition-all duration-200";
+  const hoverClass = isActive ? "" : "group";
 
   useEffect(() => {
     if (shouldShowSubmenu && !isExpanded) {
@@ -61,7 +59,16 @@ export default function ProjectsMenu({
           onClick={() => handleMenuSelect(menuId)}
           className={`${menuBtnClass} ${hoverClass}${isActive ? " text-th-rd" : ""}`}
         >
-          {children}
+          {isActive ? (
+            <span className="underline">{children}</span>
+          ) : (
+            <>
+              <span className="project-arrow opacity-0 group-hover:opacity-100 transition-opacity duration-200 mr-2">
+                ➜
+              </span>
+              <span className="underline">{children}</span>
+            </>
+          )}
         </button>
       </li>
       {isExpanded && (
@@ -73,9 +80,7 @@ export default function ProjectsMenu({
           {projects.map((project, index) => {
             const isProjectActive =
               menuSelection.menuId === `project-${project.id}`;
-            const projectHoverClass = isProjectActive
-              ? ""
-              : "hover:drop-shadow-menu-item transition-all duration-200";
+            const projectHoverClass = isProjectActive ? "" : "group";
             return (
               <li
                 key={project.id}
@@ -90,14 +95,17 @@ export default function ProjectsMenu({
                 <button
                   disabled={isProjectActive}
                   onClick={() => handleMenuSelect(`project-${project.id}`)}
-                  className={`barlow-bold text-lg text-th-db ${projectHoverClass}`}
+                  className={`barlow-bold text-lg ${isProjectActive ? "text-th-rd" : "text-th-db"} ${projectHoverClass}`}
                 >
                   {isProjectActive ? (
-                    <>
-                      <span className="project-arrow">➜</span> {project.title}
-                    </>
+                    <span className="underline">{project.title}</span>
                   ) : (
-                    project.title
+                    <>
+                      <span className="project-arrow opacity-0 group-hover:opacity-100 transition-opacity duration-200 mr-2 no-underline">
+                        ➜
+                      </span>
+                      <span className="underline">{project.title}</span>
+                    </>
                   )}
                 </button>
               </li>

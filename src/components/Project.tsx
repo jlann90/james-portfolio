@@ -33,7 +33,8 @@ export default function Project({
     {
       id: "portfolio-website",
       title: "Portfolio Website",
-      description: "Example emails created with the React based module library",
+      description:
+        "I designed and developed this portfolio website to showcase my frontend development skills and design system expertise. Built with React, TypeScript, and Tailwind CSS v4, it demonstrates my ability to create modern, accessible, and performant web applications. The site features custom animations, responsive design, and a cohesive design system with carefully crafted color palettes and typography. I implemented smooth page transitions, interactive hover states, and a modular component architecture that reflects my experience with scalable design systems. This project highlights my proficiency in modern frontend technologies while maintaining clean, maintainable code and excellent user experience.",
       image: PortfolioWebsite,
       websiteUrl: "https://github.com/jlann90/james-portfolio",
       buttonText: "View Code",

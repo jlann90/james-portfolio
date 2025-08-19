@@ -25,24 +25,6 @@ export default function ProjectsPage(): React.ReactElement {
       description: "Example emails created with the React based module library",
       image: PortfolioWebsite,
     },
-    {
-      id: "indeed-component-library",
-      title: "Indeed Component Library",
-      description: "Example emails created with the React based module library",
-      image: IndeedExamples,
-    },
-    {
-      id: "indeed-component-library",
-      title: "Indeed Component Library",
-      description: "Example emails created with the React based module library",
-      image: IndeedExamples,
-    },
-    {
-      id: "indeed-component-library",
-      title: "Indeed Component Library",
-      description: "Example emails created with the React based module library",
-      image: IndeedExamples,
-    },
   ];
 
   const handleProjectClick = (projectId: string) => {

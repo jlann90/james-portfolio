@@ -11,12 +11,10 @@ export default function MenuItems({
 }: MenuItemsProps): React.ReactElement {
   const { menuSelection, handleMenuSelect } = useMenu();
   const menuListClass = "text-right pt-[24px] pr-[24px]";
-  const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db underline";
+  const menuBtnClass = "climate-crisis text-2xl uppercase text-th-db";
 
   const isActive = menuSelection.menuId === menuId;
-  const hoverClass = isActive
-    ? ""
-    : "hover:drop-shadow-menu-item transition-all duration-200";
+  const hoverClass = isActive ? "" : "group";
 
   return (
     <li className={menuListClass}>
@@ -25,7 +23,16 @@ export default function MenuItems({
         onClick={() => handleMenuSelect(menuId)}
         className={`${menuBtnClass} ${hoverClass}${isActive ? " text-th-rd" : ""}`}
       >
-        {children}
+        {isActive ? (
+          <span className="underline">{children}</span>
+        ) : (
+          <>
+            <span className="project-arrow opacity-0 group-hover:opacity-100 transition-opacity duration-200 mr-2">
+              ➜
+            </span>
+            <span className="underline">{children}</span>
+          </>
+        )}
       </button>
     </li>
   );
