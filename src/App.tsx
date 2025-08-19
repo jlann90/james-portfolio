@@ -3,6 +3,7 @@ import Menu from "./components/Menu/Menu";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import Project from "./components/Project";
+import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
 
@@ -17,6 +18,8 @@ function AppContent(): React.ReactElement {
   } else if (menuSelection.menuId.startsWith("project-")) {
     const projectId = menuSelection.menuId.replace("project-", "");
     pageContent = <Project key={projectId} projectId={projectId} />;
+  } else if (menuSelection.menuId === "experience") {
+    pageContent = <Experience />;
   } else if (menuSelection.menuId === "contact") {
     pageContent = <Contact />;
   }

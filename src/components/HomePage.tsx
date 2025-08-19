@@ -19,13 +19,12 @@ export default function Homepage(): React.ReactElement {
         className="barlow-bold text-th-wh text-2xl pt-[24px]   animate-fade-in-staggered"
         style={{ "--delay": "0.4s" } as React.CSSProperties}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
-        ultrices varius. Donec enim libero, cursus vel dui vitae, tempor lacinia
-        nunc. Nam elementum ipsum suscipit massa posuere tempus. Phasellus
-        consectetur justo lorem, vitae pretium orci aliquam nec. Cras gravida
-        turpis vel velit sollicitudin tempor vitae eu mauris. Sed nunc urna,
-        iaculis ac pellentesque nec, vulputate sed neque. In porta ex lorem, in
-        rhoncus lacus mollis sed. Ut commodo erat sed dapibus aliquam.
+        Hi, I'm James. Frontend UX Developer with 7+ years of experience
+        building scalable design systems and accessible UI components. Led
+        high-visibility initiatives at Indeed and Cambia, including dark mode
+        implementation for Indeeds React library used by millions. Skilled in
+        React, Typescript, HTML, CSS, accessibility requirements and design
+        tooling, bridging the gap between design and engineering.
       </p>
     </section>
   );
