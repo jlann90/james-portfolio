@@ -13,6 +13,7 @@ export const experienceData: ExperienceEntry[] = [
     role: "UX Frontend Developer",
     years: "2021-2025",
     achievements: [
+      "Promoted from Associate level in 2023 for key contributions and technical leadership",
       "Led dark mode implementation for Indeeds React-based component library, conducting research across 35+ components and creating automated functions to detect color token values and apply appropriate dark mode styling, improving user experience for job seekers",
       "Developed 20+ React components per Figma specs, ensuring pixel-perfect implementation and design consistency across Indeeds design system",
       "Ensured accessibility and responsiveness for all components, meeting WCAG 2.1 AA standards, and optimizing UX across desktop, tablet, and mobile devices",

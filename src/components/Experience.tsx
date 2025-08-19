@@ -2,15 +2,24 @@ import { experienceData } from "../data/experience";
 
 export default function Experience(): React.ReactElement {
   return (
-    <section className="pt-[120px] max-w-[1200px] pl-[8px] pr-[24px] relative h-screen">
+    <section className="pt-[120px] max-w-[900px] pl-[8px] pr-[24px] relative min-h-screen">
+      <h1
+        className="climate-crisis text-[64px] uppercase pt-[30px] pl-[10px] pb-[24px] text-th-yw text-shadow-title animate-fade-in-staggered"
+        style={{ "--delay": "0.1s" } as React.CSSProperties}
+      >
+        Where I've worked
+      </h1>
       {/* Fixed Scrollbar Divider */}
       <div
-        className="absolute left-[188px] top-[150px] bottom-[54px] w-[4px] bg-white rounded-full z-10 animate-fade-in-staggered"
+        className="absolute left-[188px] top-[402px] bottom-[54px] w-[4px] bg-white rounded-full z-10 animate-fade-in-staggered"
         style={{ "--delay": "0.8s" } as React.CSSProperties}
       ></div>
 
       {/* Scrollable Content Container */}
-      <div className="h-full overflow-y-auto scrollbar-hide">
+      <div
+        className="overflow-y-auto scrollbar-hide"
+        style={{ height: "calc(100vh - 200px)" }}
+      >
         <div className="space-y-[80px] pb-[60px]">
           {experienceData.map((entry, index) => (
             <div key={entry.id} className="flex gap-[78px]">

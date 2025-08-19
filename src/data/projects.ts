@@ -45,7 +45,7 @@ export const projectDetails: Project[] = [
   },
   {
     id: "cambia-component-library",
-    title: "CHS Component Library",
+    title: "Cambia Component Library",
     description:
       "I helped develop a component library for email campaigns using Salesforce Marketing Cloud, AMPscript, HTML, and CSS, streamlining workflows and improving efficiency. I collaborated with design and engineering teams to align templates with brand design systems (Regence, Asuris, BridgeSpan, and Cambia), ensuring consistency and reducing errors. My focus on accessibility and best practices enhanced email usability. This experience strengthened my front-end development skills within design systems to create scalable, high-quality marketing solutions. Due to company policy, I can't share non-public work, but I'd be happy to discuss it further, and you can view design library examples on the company's website.",
     image: RegenceExamples,
