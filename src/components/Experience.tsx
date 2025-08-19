@@ -49,6 +49,32 @@ export default function Experience(): React.ReactElement {
         "Led project management to deliver client's vision for a talent portfolio site on time and within budget",
       ],
     },
+    {
+      id: "pancake-creative",
+      company: "Pancake Creative",
+      role: "UX/UI Intern",
+      years: "2017",
+      achievements: [
+        "Conducted user research and testing using ScreenFlow, identifying key pain points and improving usability of web and mobile applications",
+        "Created user personas and journey maps with Smaply to inform design decisions and enhance user experience strategies",
+        "Prioritized and categorized pain points using Evernote, ensuring focus on high-impact areas for design improvements",
+        "Designed web app concepts with Sketch, creating both lo-fi and hi-fi wireframes to communicate design intent clearly",
+        "Developed interactive prototypes in InVision, demonstrating high-fidelity designs and ensuring alignment with client vision",
+      ],
+    },
+    {
+      id: "epicodus",
+      company: "Epicodus",
+      role: "Student (Frontend Dev/Design)",
+      years: "2017",
+      achievements: [
+        "Gained proficiency in key front-end technologies, including HTML, CSS, SASS/SCSS, JavaScript, and TypeScript, with a focus on building responsive, accessible websites",
+        "Developed and deployed applications using Angular, Firebase, and Gulp, mastering industry-standard frameworks and tools",
+        "Collaborated on group projects utilizing Git/GitHub for version control, enhancing teamwork and code management skills",
+        "Participated in design projects with Sketch and InVision, creating wireframes and interactive prototypes to showcase concepts and improve UI/UX design processes",
+        "Fostered a growth mindset by consistently troubleshooting and problem-solving to overcome coding challenges and improve project outcomes",
+      ],
+    },
   ];
 
   return (
