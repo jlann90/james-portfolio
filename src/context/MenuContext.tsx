@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 interface MenuSelection {
   menuId: string;
@@ -26,9 +32,16 @@ interface MenuProviderProps {
 export function MenuProvider({
   children,
 }: MenuProviderProps): React.ReactElement {
-  const [menuSelection, setMenuSelection] = useState<MenuSelection>({
-    menuId: "home",
+  const [menuSelection, setMenuSelection] = useState<MenuSelection>(() => {
+    // Try to get the saved menu selection from localStorage
+    const saved = localStorage.getItem("menuSelection");
+    return saved ? JSON.parse(saved) : { menuId: "home" };
   });
+
+  // Save menu selection to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("menuSelection", JSON.stringify(menuSelection));
+  }, [menuSelection]);
 
   function handleMenuSelect(menuId: string): void {
     setMenuSelection({ menuId });
