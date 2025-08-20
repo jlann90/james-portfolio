@@ -105,11 +105,39 @@ Modify `src/index.css` for global styles and utility classes.
 
 ## 🚀 Deployment
 
-The site is optimized for deployment on platforms like:
+This portfolio is deployed using GitHub Pages.
+
+### Deploy to GitHub Pages
+
+1. **Push your code to GitHub**
+
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+2. **Deploy the site**
+
+   ```bash
+   npm run deploy
+   ```
+
+3. **Configure GitHub Pages**
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Set source to "Deploy from a branch"
+   - Select "gh-pages" branch
+   - Save the settings
+
+Your site will be available at: `https://jlann90.github.io/james-portfolio`
+
+### Alternative Deployment Options
+
+The site is also optimized for deployment on platforms like:
 
 - Vercel
 - Netlify
-- GitHub Pages
 - Any static hosting service
 
 Build the project with:
