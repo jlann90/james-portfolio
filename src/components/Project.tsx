@@ -24,7 +24,7 @@ export default function Project({
   }
 
   return (
-    <section className="pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[24px] max-w-[900px] px-6 sm:px-4 lg:px-0">
+    <section className="page-section">
       <div className="flex justify-center lg:justify-start">
         <img
           className="animate-fade-in-staggered w-full max-w-[350px] sm:max-w-[400px] lg:max-w-[500px]"
@@ -35,19 +35,19 @@ export default function Project({
         />
       </div>
       <h1
-        className="climate-crisis text-small-28 text-[36px] sm:text-[40px] lg:text-[48px] text-1054px-64 uppercase pt-[30px] pl-[10px] text-th-yw text-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-small-28 text-1054px-64 text-shadow-title animate-fade-in-staggered page-title"
         style={{ "--delay": "0.6s" } as React.CSSProperties}
       >
         {foundProject.title}
       </h1>
       <p
-        className="barlow-bold text-th-wh text-base sm:text-lg md:text-2xl pt-[24px] animate-fade-in-staggered"
+        className="barlow-bold animate-fade-in-staggered page-body-text"
         style={{ "--delay": "0.8s" } as React.CSSProperties}
       >
         {foundProject.description}
       </p>
       <div
-        className="pt-[20px] flex justify-end animate-fade-in-staggered"
+        className="animate-fade-in-staggered page-button-container"
         style={{ "--delay": "1.0s" } as React.CSSProperties}
       >
         <a

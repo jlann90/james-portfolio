@@ -5,11 +5,15 @@ import { projects } from "../../data/projects";
 interface ProjectsMenuProps {
   menuId: string;
   children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function ProjectsMenu({
   menuId,
   children,
+  className,
+  style,
 }: ProjectsMenuProps): React.ReactElement {
   const { menuSelection, handleMenuSelect } = useMenu();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,7 +45,7 @@ export default function ProjectsMenu({
 
   return (
     <>
-      <li className={menuListClass}>
+      <li className={`${menuListClass} ${className || ""}`} style={style}>
         <button
           disabled={isActive}
           onClick={() => handleMenuSelect(menuId)}

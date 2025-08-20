@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useMenu } from "../../context/MenuContext";
+import MobileMenuItem from "./MobileMenuItem";
+import GitHubIcon from "./../../assets/GitHubIcon.svg";
+import LinkedInIcon from "./../../assets/LinkedInIcon.svg";
 
 export default function MobileMenu(): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,61 +69,62 @@ export default function MobileMenu(): React.ReactElement {
         </button>
 
         <div className="flex flex-col justify-center items-center h-full space-y-8">
-          <div
-            className="animate-fade-in-staggered list-none text-center"
-            style={{ "--delay": "0.1s" } as React.CSSProperties}
+          <MobileMenuItem
+            menuId="home"
+            currentMenuId={menuSelection.menuId}
+            delay="0.1s"
+            onClick={handleMenuClick}
           >
-            <button
-              disabled={menuSelection.menuId === "home"}
-              onClick={() => handleMenuClick("home")}
-              className={`climate-crisis text-2xl uppercase text-th-db ${
-                menuSelection.menuId === "home" ? "text-th-rd" : ""
-              }`}
-            >
-              <span className="underline">Home</span>
-            </button>
-          </div>
-          <div
-            className="animate-fade-in-staggered list-none text-center"
-            style={{ "--delay": "0.2s" } as React.CSSProperties}
+            Home
+          </MobileMenuItem>
+          <MobileMenuItem
+            menuId="projects"
+            currentMenuId={menuSelection.menuId}
+            delay="0.2s"
+            onClick={handleMenuClick}
           >
-            <button
-              disabled={menuSelection.menuId === "projects"}
-              onClick={() => handleMenuClick("projects")}
-              className={`climate-crisis text-2xl uppercase text-th-db ${
-                menuSelection.menuId === "projects" ? "text-th-rd" : ""
-              }`}
-            >
-              <span className="underline">Projects</span>
-            </button>
-          </div>
-          <div
-            className="animate-fade-in-staggered list-none text-center"
-            style={{ "--delay": "0.3s" } as React.CSSProperties}
+            Projects
+          </MobileMenuItem>
+          <MobileMenuItem
+            menuId="experience"
+            currentMenuId={menuSelection.menuId}
+            delay="0.3s"
+            onClick={handleMenuClick}
           >
-            <button
-              disabled={menuSelection.menuId === "experience"}
-              onClick={() => handleMenuClick("experience")}
-              className={`climate-crisis text-2xl uppercase text-th-db ${
-                menuSelection.menuId === "experience" ? "text-th-rd" : ""
-              }`}
-            >
-              <span className="underline">Experience</span>
-            </button>
-          </div>
-          <div
-            className="animate-fade-in-staggered list-none text-center"
-            style={{ "--delay": "0.4s" } as React.CSSProperties}
+            Experience
+          </MobileMenuItem>
+          <MobileMenuItem
+            menuId="contact"
+            currentMenuId={menuSelection.menuId}
+            delay="0.4s"
+            onClick={handleMenuClick}
           >
-            <button
-              disabled={menuSelection.menuId === "contact"}
-              onClick={() => handleMenuClick("contact")}
-              className={`climate-crisis text-2xl uppercase text-th-db ${
-                menuSelection.menuId === "contact" ? "text-th-rd" : ""
-              }`}
+            Contact
+          </MobileMenuItem>
+
+          {/* Social Icons */}
+          <div
+            className="flex justify-center items-center space-x-6 animate-fade-in-staggered"
+            style={{ "--delay": "0.5s" } as React.CSSProperties}
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="link to James Lannon Github"
+              href="https://github.com/jlann90"
+              className="hover:drop-shadow-menu-item p-[4px] transition-all duration-200"
             >
-              <span className="underline">Contact</span>
-            </button>
+              <img src={GitHubIcon} alt="GitHub Logo" width="24" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="link to James Lannon LinkedIn"
+              href="https://www.linkedin.com/in/james-lannon/"
+              className="hover:drop-shadow-menu-item p-[4px] transition-all duration-200"
+            >
+              <img src={LinkedInIcon} alt="LinkedIn Logo" width="24" />
+            </a>
           </div>
         </div>
       </nav>

@@ -8,33 +8,37 @@ export default function Menu(): React.ReactElement {
   return (
     <>
       {/* Desktop Menu */}
-      <section className="hidden lg:block pt-[36px] pl-[102px] h-screen">
+      <section className="hidden lg:block pt-[36px] pl-[48px] h-screen">
         <nav className="w-[282px] h-[100vh] bg-th-yw rounded-t-xl outline-6 outline-th-db flex flex-col justify-between animate-slide-up shadow-[var(--box-shadow-menu)]">
           <ul>
-            <li
+            <MenuItems
+              menuId="home"
               className="animate-fade-in-staggered"
               style={{ "--delay": ".2s" } as React.CSSProperties}
             >
-              <MenuItems menuId="home">Home</MenuItems>
-            </li>
-            <li
+              Home
+            </MenuItems>
+            <ProjectsMenu
+              menuId="projects"
               className="animate-fade-in-staggered"
               style={{ "--delay": "0.4s" } as React.CSSProperties}
             >
-              <ProjectsMenu menuId="projects">Projects</ProjectsMenu>
-            </li>
-            <li
+              Projects
+            </ProjectsMenu>
+            <MenuItems
+              menuId="experience"
               className="animate-fade-in-staggered"
               style={{ "--delay": "0.6s" } as React.CSSProperties}
             >
-              <MenuItems menuId="experience">Experience</MenuItems>
-            </li>
-            <li
+              Experience
+            </MenuItems>
+            <MenuItems
+              menuId="contact"
               className="animate-fade-in-staggered"
               style={{ "--delay": "0.8s" } as React.CSSProperties}
             >
-              <MenuItems menuId="contact">Contact</MenuItems>
-            </li>
+              Contact
+            </MenuItems>
           </ul>
           <div className="flex justify-end pb-15 pr-[24px]">
             <a

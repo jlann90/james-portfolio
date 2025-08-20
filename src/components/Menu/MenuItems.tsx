@@ -3,11 +3,15 @@ import { useMenu } from "../../context/MenuContext";
 interface MenuItemsProps {
   menuId: string;
   children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function MenuItems({
   menuId,
   children,
+  className,
+  style,
 }: MenuItemsProps): React.ReactElement {
   const { menuSelection, handleMenuSelect } = useMenu();
   const menuListClass = "text-right pt-[24px] pr-[24px]";
@@ -17,7 +21,7 @@ export default function MenuItems({
   const hoverClass = isActive ? "" : "group";
 
   return (
-    <li className={menuListClass}>
+    <li className={`${menuListClass} ${className || ""}`} style={style}>
       <button
         disabled={isActive}
         onClick={() => handleMenuSelect(menuId)}

@@ -173,12 +173,6 @@
   .text-small-28 {
     font-size: 1.75rem; /* 28px */
   }
-  .text-small-30 {
-    font-size: 1.875rem; /* 30px */
-  }
-  .text-small-32 {
-    font-size: 2rem; /* 32px */
-  }
 }
 
 /* Custom breakpoint for medium screens (768px - 1023px) */
@@ -196,4 +190,21 @@
   .text-1054px-40 {
     font-size: 2.5rem; /* 40px */
   }
+}
+
+/* Utility classes for repetitive patterns */
+.page-section {
+  @apply pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[24px] max-w-[900px] px-6 sm:px-4 lg:px-0;
+}
+
+.page-title {
+  @apply text-[36px] sm:text-[40px] lg:text-[48px] uppercase pt-[30px] pl-[10px] text-th-yw;
+}
+
+.page-body-text {
+  @apply text-th-wh text-base sm:text-lg md:text-2xl pt-[24px];
+}
+
+.page-button-container {
+  @apply pt-[20px] flex justify-end;
 }

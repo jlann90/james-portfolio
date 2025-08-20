@@ -2,16 +2,16 @@ import { experienceData } from "../data/experience";
 
 export default function Experience(): React.ReactElement {
   return (
-    <section className="pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[24px] max-w-[900px] px-6 sm:px-4 lg:px-0 lg:pl-[8px] lg:pr-[24px] relative h-full flex flex-col">
+    <section className="page-section lg:pl-[8px] lg:pr-[24px] relative h-full flex flex-col">
       <h1
-        className="climate-crisis text-small-28 text-[36px] sm:text-[40px] lg:text-[48px] text-1054px-64 uppercase pt-[30px] pl-[10px] pb-[24px] text-th-yw text-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-small-28 text-1054px-64 text-shadow-title animate-fade-in-staggered page-title pb-[24px]"
         style={{ "--delay": "0.1s" } as React.CSSProperties}
       >
         Where I've worked
       </h1>
       {/* Fixed Scrollbar Divider */}
       <div
-        className="hidden md:block absolute left-[188px] top-[402px] bottom-[54px] w-[4px] bg-white rounded-full z-10 animate-fade-in-staggered experience-scrollbar"
+        className="hidden md:block absolute left-[188px] top-[288px] bottom-[54px] w-[4px] bg-white rounded-full z-10 animate-fade-in-staggered experience-scrollbar"
         style={{ "--delay": "0.8s" } as React.CSSProperties}
       ></div>
 

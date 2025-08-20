@@ -9,9 +9,9 @@ export default function ProjectsPage(): React.ReactElement {
   };
 
   return (
-    <section className="pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[24px] max-w-[950px] px-4 sm:px-4 lg:px-0 lg:pl-[8px] relative h-full flex flex-col">
+    <section className="page-section max-w-[950px] lg:pl-[8px] relative h-full flex flex-col">
       <h1
-        className="climate-crisis text-small-28 text-[36px] sm:text-[40px] lg:text-[48px] text-1054px-64 uppercase pt-[30px] pl-[10px] pb-[24px] text-th-yw text-shadow-title animate-fade-in-staggered"
+        className="climate-crisis text-small-28 text-1054px-64 text-shadow-title animate-fade-in-staggered page-title pb-[24px]"
         style={{ "--delay": "0.1s" } as React.CSSProperties}
       >
         Things I've built
