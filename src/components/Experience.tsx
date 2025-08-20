@@ -34,17 +34,26 @@ export default function Experience(): React.ReactElement {
               </div>
 
               {/* Content Column */}
-              <div
-                className="flex-1 animate-fade-in-staggered"
-                style={
-                  { "--delay": `${index * 0.4 + 1.2}s` } as React.CSSProperties
-                }
-              >
+              <div className="flex-1">
                 <div className="mb-[24px]">
-                  <h3 className="climate-crisis text-[20px] md:text-[28px] uppercase text-th-yw mb-[8px]">
+                  <h3
+                    className="climate-crisis text-[20px] md:text-[28px] uppercase text-th-yw mb-[8px] animate-fade-in-staggered"
+                    style={
+                      {
+                        "--delay": `${index * 0.4 + 1.2}s`,
+                      } as React.CSSProperties
+                    }
+                  >
                     {entry.role}
                   </h3>
-                  <h4 className="climate-crisis text-[18px] md:text-[24px] uppercase text-th-yw">
+                  <h4
+                    className="climate-crisis text-[18px] md:text-[24px] uppercase text-th-yw animate-fade-in-staggered"
+                    style={
+                      {
+                        "--delay": `${index * 0.4 + 1.4}s`,
+                      } as React.CSSProperties
+                    }
+                  >
                     {entry.company}
                   </h4>
                 </div>
@@ -53,11 +62,11 @@ export default function Experience(): React.ReactElement {
                   {entry.achievements.map((achievement, achievementIndex) => (
                     <li
                       key={achievementIndex}
-                      className="barlow-bold text-white text-[14px] md:text-[16px] leading-relaxed"
+                      className="barlow-bold text-white text-[14px] md:text-[16px] leading-relaxed animate-fade-in-staggered"
                       style={
                         {
                           textShadow: "var(--text-shadow-body)",
-                          animationDelay: `${index * 0.4 + 1.2 + achievementIndex * 0.1}s`,
+                          "--delay": `${index * 0.4 + 1.2 + achievementIndex * 0.1}s`,
                         } as React.CSSProperties
                       }
                     >

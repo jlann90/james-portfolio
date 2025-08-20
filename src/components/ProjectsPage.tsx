@@ -16,7 +16,7 @@ export default function ProjectsPage(): React.ReactElement {
       >
         Things I've built
       </h1>
-      <div className="overflow-y-auto scrollbar-hide flex-1">
+      <div className="overflow-y-auto scrollbar-hide flex-1 pb-[20px]">
         <div className="flex flex-wrap gap-8 lg:gap-[66px] mt-[40px] justify-center lg:justify-start pl-4 sm:pl-6 lg:pl-2 pr-4 sm:pr-6 lg:pr-2">
           {projects.map((project, index) => (
             <button

@@ -143,6 +143,19 @@
   animation: fade-in 0.8s ease-out calc(0.2s + var(--delay, 0s)) both;
 }
 
+@keyframes fade-in-simple {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in-simple 0.8s ease-out calc(0.2s + var(--delay, 0s)) both;
+}
+
 @keyframes roll-in {
   0% {
     transform: translateX(-100%) rotate(-180deg);
@@ -194,7 +207,7 @@
 
 /* Utility classes for repetitive patterns */
 .page-section {
-  @apply pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[24px] max-w-[900px] px-6 sm:px-4 lg:px-0;
+  @apply pt-[60px] sm:pt-[80px] lg:pt-[120px] pb-[80px] sm:pb-[60px] lg:pb-[24px] max-w-[900px] px-6 sm:px-4 lg:px-0;
 }
 
 .page-title {

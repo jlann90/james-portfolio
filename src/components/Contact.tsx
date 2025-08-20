@@ -24,13 +24,12 @@ export default function Contact(): React.ReactElement {
         className="barlow-bold animate-fade-in-staggered page-body-text"
         style={{ "--delay": "0.2s" } as React.CSSProperties}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare
-        ultrices varius. Donec enim libero, cursus vel dui vitae, tempor lacinia
-        nunc. Nam elementum ipsum suscipit massa posuere tempus. Phasellus
-        consectetur justo lorem, vitae pretium orci aliquam nec. Cras gravida
-        turpis vel velit sollicitudin tempor vitae eu mauris. Sed nunc urna,
-        iaculis ac pellentesque nec, vulputate sed neque. In porta ex lorem, in
-        rhoncus lacus mollis sed. Ut commodo erat sed dapibus aliquam.
+        I'm always excited to connect with teams looking to build exceptional
+        user experiences. Whether you're seeking a frontend developer to enhance
+        your design system, need help scaling your component library, or want to
+        collaborate on innovative projects, I'd love to hear from you. Let's
+        discuss how we can work together to create impactful, accessible, and
+        scalable solutions that drive real value for your users and business.
       </p>
       <div
         className="animate-fade-in-staggered page-button-container"

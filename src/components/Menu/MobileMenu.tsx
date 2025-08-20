@@ -22,7 +22,8 @@ export default function MobileMenu(): React.ReactElement {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 lg:hidden bg-th-yw rounded-lg p-2 sm:p-3 shadow-[var(--box-shadow-hamburger-menu)] outline-4 outline-th-db"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 lg:hidden bg-th-yw rounded-lg p-2 sm:p-3 shadow-[var(--box-shadow-hamburger-menu)] outline-4 outline-th-db animate-fade-in"
+        style={{ "--delay": "0.1s" } as React.CSSProperties}
         aria-label="Toggle menu"
       >
         <div className="w-5 h-5 sm:w-6 sm:h-6 flex flex-col justify-center items-center">
