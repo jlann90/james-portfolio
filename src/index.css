@@ -12,7 +12,7 @@
   --color-th-yw: oklch(78.28% 0.168 66.2);
 
   --box-shadow-menu: -20px -16px 0 rgb(247, 23, 53);
-
+  --box-shadow-hamburger-menu: -10px -6px 0 rgb(247, 23, 53);
   --drop-shadow-menu-item: -2px -2px 0 rgb(247, 23, 53);
   --drop-shadow-button: -8px -4px 0 rgb(247, 23, 53);
   --drop-shadow-app: 0px 0px 60px rgb(0, 0, 0);
@@ -161,4 +161,39 @@
 .animate-roll-in {
   animation: roll-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     calc(0.4s + var(--delay, 0s)) both;
+}
+
+/* Mobile menu list styling */
+.mobile-menu li {
+  list-style: none;
+}
+
+/* Custom breakpoint for small screens (320px - 395px) */
+@media (max-width: 395px) {
+  .text-small-28 {
+    font-size: 1.75rem; /* 28px */
+  }
+  .text-small-30 {
+    font-size: 1.875rem; /* 30px */
+  }
+  .text-small-32 {
+    font-size: 2rem; /* 32px */
+  }
+}
+
+/* Custom breakpoint for medium screens (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .experience-scrollbar {
+    top: 216px !important;
+  }
+}
+
+/* Custom breakpoint for 1054px */
+@media (min-width: 1054px) {
+  .text-1054px-64 {
+    font-size: 4rem; /* 64px */
+  }
+  .text-1054px-40 {
+    font-size: 2.5rem; /* 40px */
+  }
 }

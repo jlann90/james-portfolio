@@ -66,13 +66,13 @@ export default function Modal(): React.ReactElement | null {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
-      <div className="bg-th-yw p-[24px] rounded-lg max-w-xl w-full min-h-[550px] animate-slide-down">
+    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4 sm:p-6">
+      <div className="bg-th-yw p-6 sm:p-8 rounded-lg max-w-md sm:max-w-lg lg:max-w-xl w-full min-h-[500px] sm:min-h-[550px] animate-slide-down">
         <form onSubmit={handleSubmit}>
           <div className="flex justify-between items-center">
             <label
               htmlFor="subject"
-              className="climate-crisis text-[24px] uppercase pt-[18px] text-th-db"
+              className="climate-crisis text-[20px] sm:text-[24px] lg:text-[28px] uppercase pt-[18px] text-th-db"
             >
               Subject
             </label>
@@ -90,7 +90,7 @@ export default function Modal(): React.ReactElement | null {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               required
-              className="w-full px-3 py-2 bg-th-wh border border-th-db rounded-md text-th-db text-2xl focus:outline-none focus:drop-shadow-button"
+              className="w-full px-3 py-2 bg-th-wh border border-th-db rounded-md text-th-db text-lg sm:text-xl lg:text-2xl focus:outline-none focus:drop-shadow-button"
               placeholder="What's this about?"
             />
           </div>
@@ -98,7 +98,7 @@ export default function Modal(): React.ReactElement | null {
           <div className="pt-[30px]">
             <label
               htmlFor="message"
-              className="climate-crisis text-[24px] uppercase text-th-db"
+              className="climate-crisis text-[20px] sm:text-[24px] lg:text-[28px] uppercase text-th-db"
             >
               Message
             </label>
@@ -108,7 +108,7 @@ export default function Modal(): React.ReactElement | null {
               onChange={(e) => setMessage(e.target.value)}
               required
               rows={6}
-              className="w-full px-3 py-2 bg-th-wh border border-th-db rounded-md text-th-db text-2xl focus:outline-none focus:drop-shadow-button resize-none scrollbar-hide mt-[18px]"
+              className="w-full px-3 py-2 bg-th-wh border border-th-db rounded-md text-th-db text-lg sm:text-xl lg:text-2xl focus:outline-none focus:drop-shadow-button resize-none scrollbar-hide mt-[18px]"
               placeholder="Enter your message here..."
             />
           </div>
@@ -116,7 +116,7 @@ export default function Modal(): React.ReactElement | null {
           <div className="pt-4 flex justify-end">
             <Button
               type="submit"
-              className="px-[24px] py-[6px] barlow-bold text-2xl rounded-xl border-4 border-th-db text-th-db bg-th-yw hover:drop-shadow-button hover:text-th-rd transition-all duration-200"
+              className="px-[24px] py-[6px] barlow-bold text-lg sm:text-xl lg:text-2xl rounded-xl border-4 border-th-db text-th-db bg-th-yw hover:drop-shadow-button hover:text-th-rd transition-all duration-200"
             >
               Send
             </Button>

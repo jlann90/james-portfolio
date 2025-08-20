@@ -25,8 +25,10 @@ function AppContent(): React.ReactElement {
   }
 
   return (
-    <main className="flex justify-between bg-gradient-to-b from-th-db-dark to-th-db pl-[84px] pr-[24px] h-screen overflow-hidden">
-      <div className="flex-1 overflow-y-auto scrollbar-hide">{pageContent}</div>
+    <main className="flex flex-col lg:flex-row justify-between bg-gradient-to-b from-th-db-dark to-th-db lg:pl-[84px] lg:pr-[24px] h-screen overflow-hidden">
+      <div className="flex-1 overflow-y-auto scrollbar-hide min-h-0 h-full">
+        {pageContent}
+      </div>
       <Menu />
     </main>
   );

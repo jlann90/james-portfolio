@@ -27,7 +27,7 @@ export default function MenuItems({
           <span className="underline">{children}</span>
         ) : (
           <>
-            <span className="project-arrow opacity-0 group-hover:opacity-100 transition-opacity duration-200 mr-2">
+            <span className="project-arrow opacity-0 group-hover:opacity-100 transition-opacity duration-200 mr-2 hidden md:inline">
               ➜
             </span>
             <span className="underline">{children}</span>

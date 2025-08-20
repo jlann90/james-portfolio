@@ -10,7 +10,7 @@ export default function Button({
 }: ButtonProps): React.ReactElement {
   return (
     <button
-      className="px-[24px] py-[6px] barlow-bold text-2xl rounded-xl border-4 border-th-db text-th-db bg-th-yw hover:drop-shadow-button hover:text-th-rd transition-all duration-200"
+      className="px-[16px] sm:px-[20px] md:px-[24px] py-[4px] sm:py-[5px] md:py-[6px] barlow-bold text-lg sm:text-xl md:text-2xl rounded-xl border-2 sm:border-3 md:border-4 border-th-db text-th-db bg-th-yw hover:drop-shadow-button hover:text-th-rd transition-all duration-200"
       {...props}
     >
       {children}
