@@ -33,7 +33,11 @@ export default function Homepage(): React.ReactElement {
         className="animate-fade-in-staggered page-button-container"
         style={{ "--delay": "0.5s" } as React.CSSProperties}
       >
-        <a href="/JamesResume.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          href="/james-portfolio/JamesResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button>Download Resume</Button>
         </a>
       </div>
